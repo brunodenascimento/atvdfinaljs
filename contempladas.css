@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 90px; /* Adjust the margin-top as needed */
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+
+
+#divBusca {
+    width: 500px;
+    background-color: #9ea7a7;
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 15px; /* Adicionei algum preenchimento para melhorar a aparência */
+}
+
+div.container {
+    width: 100%;
+    max-width: 360px;
+    margin: 20px auto 0; /* Adiciona margem superior de 20 pixels */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+
+
+
+h1 {
+    color: #333; /* Change the color if needed */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    text-align: center;
+    align-items: vertical;
+}
+
+
+
+
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    margin-top: 90px; /* Adjust the margin-top as needed */
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+
+#divBusca{
+    background-color:#9ea7a7;
+    border:gray 50px;
+    border-radius:15px;
+    width:900px;
+    background-color: #9ea7a7;
+  }
+
+
+
+div {
+    text-align: start;
+    align-items: vertical;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+
+
+h1 {
+    color: #333; /* Change the color if needed */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    text-align: center;
+    align-items: center;
+}
+
+.botoes{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.imagemhome{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: none;
+    }
+    .imagemsair{
+    position: absolute;
+    float: left;
+    margin-top: 80px;
+    margin-left: 37px;
+
+    }
+    .imagemvoltar{
+    position: absolute;
+    float: left;
+    margin-top: 120px;
+    margin-left: 35px;
+    }
+
+.perfil {
+  position: fixed; /* Mantém a imagem fixa na tela */
+  top: 20px; /* Define a distância do topo */
+  right: 20px; /* Define a distância da direita */
+  width: 50px; /* Define a largura da imagem */
+  z-index: 999; 
+  }

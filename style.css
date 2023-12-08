@@ -1,0 +1,66 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #675656;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+.box:nth-child(1) {
+  background-color: #3498db;
+}
+
+.box:nth-child(2) {
+  background-color: #2980b9;
+}
+
+.box:nth-child(3) {
+  background-color: #2c3e50;
+}
+
+.middle-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 400px;
+}
+
+#map {
+  width: 300px; /* Defina o tamanho desejado */
+  height: 300px; /* Defina o tamanho desejado */
+  border: 1px solid #ccc;
+}
+
+.ranking {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.right-section {
+  /* Estilos para o lado direito */
+  width: 200px;
+  height: 400px;
+  background-color: #f2f2f2;
+}

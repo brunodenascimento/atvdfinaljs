@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+
+      font-size: 36px;
+      margin: 0px;
+
+    }
+
+    header button {
+      color: white;
+      background-color: #3498db;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-left: 10px;
+    }
+
+    header button:first-child {
+      margin-left: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px; 
+      margin-top: 20px;
+    }
+      #box01 {
+        width: 150px;
+        float:right;
+        margin-right: 970px;
+        margin-top: 5px;
+      }
+
+    #box02 {
+      width: 775px;
+      float:right;
+      margin-right: 970px;
+      margin-top: -125px;
+    }
+    #box03 {
+      width: 775px;
+      float:right;
+      margin-right: 970px;
+      margin-top: -275px;
+    }
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #map {
+      max-width: 100%;
+      height: auto;
+      max-height: 60vh; 
+      margin-top: 20px;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+    }.graficos img {
+    width: 360px;
+    height: 400px;
+    position: absolute;
+    top:30%;
+    left:75%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MAPEAMENTO NAS ESCOLAS</h1>
+    <div>
+      <a href="login.html"><button>Login</button></a>
+       <a href="cadastro.html"><button>Cadastro</button></a>
+    </div>
+
+  </header>
+
+  <div class="container">
+
+    </div>
+    <img src="imagens/pernambuco.png" alt="Mapa d Pernambuco" id="map">
+  <img src="imagens/Rectangle 1.jpg" alt='retanguloazul01' id="box01">
+  <img src="imagens/23.432.png" alt='retanguloazul01' id="box02">
+   <img src="imagens/23.432 (1).png" alt='retanguloazul01' id="box03">
+  </div>
+  <div class="graficos">
+    <img src="imagens/Group 8.png" alt="gráficos">
+      </div>
+</body>
+</html>

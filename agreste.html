@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 80%;
+      position: relative;
+    }
+
+    .map-container {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    #map {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .icons {
+      position: fixed;
+    }
+
+    .group166 {
+      top: 100px;
+      left: 20px;
+    }
+
+    .perfil {
+      top: 20px;
+      right: 20px;
+    }
+
+    .barrapesquisa {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 150px;
+      right: 20px;
+    }
+
+    .barrapesquisa img {
+      margin: 0 10px;
+    }
+
+    .retangulos {
+      position: fixed;
+      top: 180px;
+      left: 180px;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .box01:nth-child(1) {
+      background-color: #00AFEF;
+    }
+
+    .box01:nth-child(2) {
+      background-color: #139CCE;
+    }
+
+    .box01:nth-child(3) {
+      background-color: #31356E;
+    }
+
+    .box01 {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .box01 p {
+      margin: 0;
+      text-align: center;
+    }
+
+    .box01 h1 {
+      margin: 0;
+      font-size: 36px;
+      color: white;
+      margin-top: 8px;
+    }
+
+    /* Media queries para responsividade */
+    @media (max-width: 768px) {
+      .icons {
+        display: none;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      .map-container {
+        width: 90%;
+      }
+      .retangulos {
+        top: 10px;
+        left: 10px;
+      }
+      .box01 {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+      }.graficos img {
+      width: 160px;
+      height: 400px;
+      position: absolute;
+      top:200%;
+      left:-600%;
+      
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AGRESTE</h1>
+  </header>
+
+  <div class="container">
+    <div class="map-container">
+      <img src="imagens/agrestepe 1.png" alt="Mapa do sertao" id="map">
+    </div>
+
+    <div class="icons group166">
+       <a href="telainicio.html"><img src="imagens/Group 166.png" alt="Ícone Grupo 166"></a>
+    </div>
+
+    <div class="icons perfil">
+       <a href="perfil.html"><img src="imagens/perfil.png" alt="perfil"></a>
+    </div>
+  </div>
+
+  <div class="retangulos">
+    <div class="box01">
+      <p>ESCOLAS MAPEADAS</p>
+      <h1>2000</h1>
+    </div>
+    <div class="box01">
+      <p>ESCOLAS CONTEMPLADAS</p>
+      <h1>300</h1>
+    </div>
+    <div class="box01">
+      <p>ESCOLAS DENTRO DOS PADRÕES</p>
+      <h1>50</h1>
+    </div>
+  </div>
+  <div class="barrapesquisa">
+  <div class="barrapesquisa">
+    <input type="text" id="inputPesquisa" placeholder="Pesquisar...">
+
+    <img src="imagens/Design.png" alt="Ícone Pesquisa" onclick="pesquisar()">
+  </div>
+    <div class="graficos" style="margin-top: 50px;">
+      <img src="imagens/Group 8.png" alt="graficos" style="max-width: 350px; height: auto;top:50px">
+    </div>
+  
+</body>
+</html>

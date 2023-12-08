@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 80%;
+      position: relative;
+    }
+
+    .map-container {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+
+    #map {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .icons {
+      position: fixed;
+    }
+
+    .group166 {
+      top: 100px;
+      left: 20px;
+    }
+
+    .perfil {
+      top: 20px;
+      right: 20px;
+    }
+
+    .barrapesquisa {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 150px;
+      right: 20px;
+    }
+
+    .barrapesquisa img {
+      margin: 0 10px;
+    }
+
+    .retangulos {
+      position: fixed;
+      top: 180px;
+      left: 120px;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .box01:nth-child(1) {
+      background-color: #00AFEF;
+    }
+
+    .box01:nth-child(2) {
+      background-color: #139CCE;
+    }
+
+    .box01:nth-child(3) {
+      background-color: #31356E;
+    }
+
+    .box01 {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none; 
+    }
+
+    .box01 p {
+      margin: 0;
+      color: white;
+      text-align: center;
+      text-decoration:none;
+    }
+
+    .box01 h1 {
+      margin: 0;
+      font-size: 36px;
+      color: white;
+      margin-top: 8px;
+      text-decoration:none;
+    } 
+      @media (max-width: 768px) {
+      .icons {
+        display: none;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      .map-container {
+        width: 90%;
+      }
+      .retangulos {
+        top: 10px;
+        left: 10px;
+      }
+      .box01 {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+        text-decoration: none;
+        
+  }
+      
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MAPEAMENTO NAS ESCOLAS</h1>
+  </header>
+
+  <div class="container">
+    <div class="map-container">
+      <img src="imagens/pernambuco.png" alt="Mapa de Pernambuco" id="map">
+    </div>
+
+    <div class="icons group166">
+      <a href="index.html"><img src="imagens/Group 166.png" alt="Ícone Grupo 166"></a>
+    </div>
+
+    <div class="icons perfil">
+      <a href="perfil.html"><img src="imagens/perfil.png" alt="perfil"></a>
+    </div>
+  </div>
+
+  <div class="retangulos">
+  
+    <div class="box01" style="background-color: #00AFEF;">
+      <a href="mapeadas.html" class="link-mapeadas" style="color:#00AFEF ;">
+        <p>ESCOLAS MAPEADAS</p>
+        <h1>10.543</h1>
+      </a>
+    </div>
+
+    
+    <div class="box01" style="background-color: #139CCE;">
+      <a href="contempladas.html" class="link-contempladas" style="color:#139CCE ;">
+        <p>ESCOLAS CONTEMPLADAS</p>
+        <h1>5.450</h1>
+      </a>
+    </div>
+
+   
+    <div class="box01" style="background-color: #31356E;style="text-decoration: none;">
+      <a href="dentropadrao.html" class="link-padrao" style="color:#31356E ;">
+        <p>ESCOLAS DENTRO DOS PADRÕES</p>
+        <h1>1.050</h1>
+      </a>
+    </div>
+  </div>
+
+  <div class="barrapesquisa">
+    <img src="imagens/Design.png" alt="Ícone Pesquisa">
+    <div class="barrapesquisa">
+      
+      <input type="text" id="inputPesquisa" placeholder="Pesquisar...">
+     
+      <img src="imagens/Design.png" alt="Ícone Pesquisa" onclick="pesquisar()">
+    </div>
+  </div>
+  <select id="mesorregioes" onchange="filtrarMesorregioes()">
+    <option value="">Selecione uma região</option>
+    <option value="sertao">sertao</option>
+    <option value="saofrancisco">sao francisco</option>
+    <option value="agreste">agreste</option>
+    <option value="matape">mata PE</option>
+    <option value="rmrpe">RMR PE</option>
+  </select>
+  </div>
+
+  <script>
+    function filtrarMesorregioes() {
+      var dropdown = document.getElementById("mesorregioes");
+      if (dropdown.style.display === "none" || dropdown.style.display === "") {
+        dropdown.style.display = "inline"; 
+      } else {
+        dropdown.style.display = "none";
+      }
+    }
+
+    function filtrarMesorregioes() {
+      var selecionado = document.getElementById("mesorregioes").value;
+
+      if (selecionado === "matape") {
+        window.location.href = "matape.html"; 
+      } else if (selecionado === "agreste") {
+        window.location.href = "agreste.html"; 
+      } else if (selecionado === "sertao") {
+        window.location.href = "sertao.html"; 
+      } else if (selecionado === "rmrpe") {
+        window.location.href = "rmrpe.html"; 
+      } else if (selecionado === "saofrancisco") {
+        window.location.href = "saofrancisco.html"; 
+      }
+    }
+
+  </script>
+  </body>
+  </html>
+
